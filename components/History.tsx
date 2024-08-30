@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 // Mock data for demonstration
 const mockHistory = [
@@ -9,8 +9,15 @@ const mockHistory = [
   { id: 3, topic: 'Cybersecurity Best Practices', date: '2023-08-28', status: 'Completed' },
 ]
 
+interface HistoryItem {
+  id: number;
+  topic: string;
+  date: string;
+  status: string;
+}
+
 export default function History() {
-  const [history] = useState(mockHistory)
+  const [history] = useState<HistoryItem[]>(mockHistory)
 
   return (
     <div className="min-h-screen bg-gray-900 text-green-400 p-8">
@@ -26,7 +33,7 @@ export default function History() {
             </tr>
           </thead>
           <tbody>
-            {history.map(item => (
+            {history.map((item) => (
               <tr key={item.id} className="border-t border-gray-700">
                 <td className="p-2">{item.topic}</td>
                 <td className="p-2">{item.date}</td>

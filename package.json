@@ -1,5 +1,5 @@
 {
-  "name": "wahooka",
+  "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,10 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@prisma/client": "^5.19.0",
     "axios": "^1.7.5",
-    "date-fns": "^3.6.0",
     "next": "14.2.7",
+    "openai": "^4.57.0",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -23,7 +22,6 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.7",
     "postcss": "^8",
-    "prisma": "^5.19.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
